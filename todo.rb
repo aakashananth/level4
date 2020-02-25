@@ -25,7 +25,7 @@ class Todo < ActiveRecord::Base
     puts due_laterList.map { |todo| todo.to_displayable_string }
   end
 
-  def self.add_task(task)
+  def self.add_task(newTodo)
     Todo.create!(todo_text: newTodo[:todo_text], due_date: Date.today + newTodo[:due_in_days], completed: false)
   end
 
