@@ -33,7 +33,7 @@ class Todo < ActiveRecord::Base
     todo = Todo.find(todo_id)
     todo.completed = true
     todo.save
-    return todo
+    todo
   end
 
   def to_displayable_string
